@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  13 JUL 2025 00:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  14 JUL 2025 17:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1368,7 +1368,7 @@ File: 2025-07-07-17-50-26.png Graphic file (type bmp)
 [9]
 
 [10]
-Overfull \hbox (36.47104pt too wide) in paragraph at lines 348--349
+Overfull \hbox (36.47104pt too wide) in paragraph at lines 350--351
 []\TU/HanziPenSC(0)/b/n/12 对 于 这 个 群 我 们 成 为 \TU/HanziPenSC(1)/b/it/12 Poncare \TU/HanziPenSC(0)/b/n/12 群，|  对 于 $\OML/cmm/m/it/12 a[] \OT1/cmr/m/n/12 = 0$ \TU/HanziPenSC(0)/b/n/12 的 群 我 们 称 之 为 洛 伦 兹 群，|  有 着：| $\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (^^C\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0) =
  []
 
@@ -1400,45 +1400,67 @@ File: 2025-07-09-17-25-47.png Graphic file (type bmp)
 [20]
 
 [21]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 714.
+
+[22]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 717.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 818--818
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 818--818
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 818--818
-
- []
-
-
-
 [23]
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
 
-[24])
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
+
+ []
+
+
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 854--854
+
+ []
+
+
 
 [25]
 
 [26]
+
+[27]
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+
+ []
+
+
+
+[29]
+
+[30]
+
+[31])
+
+[32]
 Chapter 2.
 (./mt.tex)
 
-[27
+[33
 
 ]
 Chapter 3.
 (./sb.tex)
 
-[28
+[34
 
 ] (./main.aux)
  ***********
@@ -1453,15 +1475,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C18557E5AE5F7C1F39F798C5640FE933;2664.
+(rerunfilecheck)             Checksum: F546FBA5242141B9BE424E7DDF8A667D;2791.
  ) 
 Here is how much of TeX's memory you used:
- 35703 strings out of 468527
- 789246 string characters out of 5447700
- 1227289 words of memory out of 5000000
- 63408 multiletter control sequences out of 15000+600000
- 641823 words of font info for 135 fonts, out of 8000000 for 9000
+ 35738 strings out of 468527
+ 790029 string characters out of 5447700
+ 1227291 words of memory out of 5000000
+ 63438 multiletter control sequences out of 15000+600000
+ 641847 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,22n,121p,580b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (30 pages).
+Output written on main.pdf (36 pages).

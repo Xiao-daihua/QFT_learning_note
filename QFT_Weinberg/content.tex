@@ -866,7 +866,7 @@ Weinberg的convention和这个相差了一个转置。但这没有什么意义�
     \begin{aligned}D_{\sigma^{\prime}\sigma}^{(j)}(1+\Theta)&=\delta_{\sigma^{\prime}\sigma}+\frac{i}{2}\Theta_{ik}(J_{ik}^{(j)})_{\sigma^{\prime}\sigma},\end{aligned}
 }
 这里面，我们使用了一个J算符定义是：
-\eq{
+\eq{\label{eq:representationJ}
     (J_{23}^{(j)}\pm iJ_{31}^{(j)})_{\sigma^{\prime}\sigma}&=(J_1^{(j)}\pm iJ_2^{(j)})_{\sigma^{\prime}\sigma}\\&=\delta_{\sigma^{\prime},\sigma\pm1}\sqrt{(j\mp\sigma)(j\pm\sigma+1)},\\(J_{12}^{(j)})_{\sigma^{\prime}\sigma}&=(J_3^{(j)})_{\sigma^{\prime}\sigma}=\sigma\delta_{\sigma^{\prime}\sigma},
 }
 其中$ \sigma $的取值是$ -j, -j+1,..., j-1,j $ 。
@@ -884,6 +884,7 @@ Weinberg的convention和这个相差了一个转置。但这没有什么意义�
     \textbf{\hlr{STEP 2:}}
     下面我们给出一个\textbf{标准的$ L(p) $ Boost形式 }。显然$ L(p) $并不是唯一选取的，我们需要进行一个合理规定：
     \eq{
+        \label{eq:canonicalL}
         \begin{aligned}
   & L^{i}{}_{k}(p) = \delta_{ik} + (\gamma - 1) \hat{p}_{i} \hat{p}_{k}, \\
   & L^{i}{}_{0}(p) = L^{0}{}_{i}(p) = \hat{p}_{i} \sqrt{\gamma^{2} - 1}, \\
@@ -1102,6 +1103,14 @@ B\Psi_{k,a,b}=b\Psi_{k,a,b}.
 
 
 
+\rmk{
+    最后还需要讨论一点，我们之前一直把J，P当成「一个抽象的展开系数」。因为我们并没有规定Hilbert空间是什么也就是我们的表示空间是什么。
+
+    现在在这一章的讨论之中，我们终于规定了对于某一个子群的Hilbert空间是什么。我们认为Hilbert空间是这些子群的不等价不可约表示空间。这样我们才能具体的进行计算。所以本章之中的所有具体实现的J其实就是和我们讨论展开的$ i/2 \omega_{ij}J^{ij} $里面的J\hlr{是一个东西，只是一个是抽象的一个是具体的实现。 }
+
+    \hlr{Little Group的方法就是把这个Lorentz群分出一个子群，然后子群和其他部分使用不同的表示的技巧。}
+}
+
 
 \section{时间和空间反演变换}
 我们上面讨论的都是一个小小的1附近的(proper and orthochronous)洛伦兹群。下面我们考虑两个大大的变换带来的影响。一切其他的洛伦兹群都可以通过$ \mathscr{P} $以及$ \mathscr{T} $ 或者组合的$\mathscr{PT} $变换得到。这两个变换的矩阵是：
@@ -1113,12 +1122,175 @@ B\Psi_{k,a,b}=b\Psi_{k,a,b}.
     \mathsf{P}\equiv U\left(\mathscr{P},0\right)\quad\mathsf{T}\equiv U\left(\mathscr{T},0\right)
 }
 似的这个算符的作用满足类似于\cref{eq:quantumlorentz}的关系，我们定义TP算符作用在洛伦兹群对应的算符上面的结果是：
-\eq{
+\eq{\label{eq:conserveTP}
     \begin{aligned}\mathsf{P}U\left(\Lambda,a\right)\mathsf{P}^{-1}&=U\left(\mathscr{P}\Lambda\mathscr{P}^{-1},\mathscr{P}a\right),\\\mathsf{T}U\left(\Lambda,a\right)\mathsf{T}^{-1}&=U\left(\mathscr{T}\Lambda\mathscr{T}^{-1},\mathscr{T}a\right)\end{aligned}
 }
-\hlr{注意，上面的式子是“定义式”，但是是“合理的”。考虑到Lorentz群本身的复合关系。}
+\hlr{注意，上面的式子是“定义式”，但是是“合理的”。考虑到Lorentz群本身的复合关系。}这样的规则包含了一个信息，就是「P,T是守恒的」。但是，其实P并不是守恒的，只有当我们不考虑weak interaction的时候才可以是守恒的。同时T也是之后会发现在一些情况下并不是守恒的。所以，在某些情况下\cref{eq:conserveTP}并不是成立的，以及TP算符甚至应该是并不能够进行定义的！！
 
-this is a change
+当我们考虑\cref{eq:conserveTP}里面的$ \Lambda $变换是一个无穷小变换的时候我们就可以研究TP算符和我们之前定义的J和动量P算符之间的对易关系，结论是：
+\eq{
+    \begin{aligned}
+& \mathsf{P} \, i \, J^{\rho\sigma} \, \mathsf{P}^{-1} = i\, \mathcal{P}_{\mu}{}^{\rho} \mathcal{P}_{\nu}{}^{\sigma} J^{\mu\nu}, \\
+& \mathsf{P} \, i \, P^{\rho} \, \mathsf{P}^{-1} = i\, \mathcal{P}_{\mu}{}^{\rho} P^{\mu}, \\
+& \mathsf{T} \, i \, J^{\rho\sigma} \, \mathsf{T}^{-1} = i\, \mathcal{T}_{\mu}{}^{\rho} \mathcal{T}_{\nu}{}^{\sigma} J^{\mu\nu}, \\
+& \mathsf{T} \, i \, P^{\rho} \, \mathsf{T}^{-1} = i\, \mathcal{T}_{\mu}{}^{\rho} P^{\mu}.
+\end{aligned}
+}
+\rmk{注意！我们这里面并没有提出常数项i，但是我们提出了实数$ \omega_{\mu\nu} $以及$ \epsilon_\rho $。这是因为，一个数和算符并不一定对易，如果是反线性的算符对于复数会出现一个complex conjugate。但是对于实数没有这个问题，所以我们cancel两边的实数但是保留下i这个虚数。}
+
+我们现在考虑这些算符的是linear还是anti的性质，我们意识到如果考虑P和H的对易关系：$ \mathsf{P}iH\mathsf{P}^{-1}=\operatorname{i}H $如果是anti-linear的话，那么对易关系就是：$ \mathsf{P}H\mathsf{P}^{-1}=-H $也就是空间反演之后的态变成了负能量的，这显然是不现实的。所以我们知道P应该是linear and unitary的算符。
+
+同时对于T算符来说，我们考虑 $ \mathsf{T}iH\mathsf{T}^{-1}=-iH. $同理我们知道T算符应该是anti-linear and anti-unitary的算符。
+\imp{时间和空间反演变换}{
+    空间反演变换是linear \& Unitary的算符；时间反演变换是anti-linear \& anti-Unitary的算符。
+} 
+所以根据这个我们可以写出最后的对易关系，或者说就是JP算符在TP变换之下的变换。我们给出下面的对易关系：
+\eq{
+    \begin{gathered}P\mathbf{J}P^{-1}=+\mathbf{J},\\P\mathbf{K}P^{-1}=-\mathbf{K},\\P\mathbf{P}P^{-1}=-\mathbf{P},\\T\mathbf{J}T^{-1}=-\mathbf{J},\\T\mathbf{K}T^{-1}=+\mathbf{K},\\T\mathbf{P}T^{-1}=-\mathbf{P},\end{gathered}
+}
+以及对Hamiltonian的对易关系是：
+\eq{
+    \mathsf{P}H\mathsf{P}^{-1}=\mathsf{T}H\mathsf{T}^{-1}=H.
+}
+我们从物理上面理解这个对易关系的现象：
+\itm{
+    \pt{P应该保持J算符的符号，因为$ j = r \times p $而r和p在空间反演下都会产生-1 }
+    \pt{T作用下J应该番号，因为时间倒流之后我们看到的转动方向其实相反的。}
+}
+下面我们考虑T和P是怎么作用在单粒子态上面的。
+
+\subsection{P作用在有质量粒子上}
+我们的单粒子态使用P，H以及$ J_3 $算符的本征态，$ 0,M,\sigma $进行标记。我们根据前面的对易关系，我们知道了解P算符作用之后的量子态只需要了解P算符作用之后这些算符的本征值有什么变化就好。
+
+由于P算符作用会让动量反转能量不变，并且也会角动量也是不变的。所以应该就是乘上一个相位：
+\eq{
+    \mathsf{P}\Psi_{k,\sigma}=\eta\Psi_{k,\sigma}
+}
+我们为了验证这个相位是否和自选相关我们可以进行推导：
+
+
+推广到一般的动量的情况下我们知道：
+\eq{
+    \mathscr{P}L(p)\mathscr{P}^{-1}=L(\mathscr{P}p)\\
+\mathscr{P}p=\left(-\mathbf{p},\sqrt{\mathbf{p}^2+M^2}\right)
+}
+第一行我们可以使用$ p^\mu = \tensor{L(p)}{^\mu_\nu}k^\nu $在左边和中间插入$ \mathscr{P} $以及$ \mathscr{P}\mathscr{P}^{-1} = 1 $得到。第二行我们直接开矩阵乘法得到。对于一般的动量我们有：
+\eq{
+    \mathsf{P}\Psi_{p,\sigma}=\eta\Psi_{\mathscr{P}_{p,\sigma}}.
+}   
+
+\rmk{重申，这里的$ J_3 $和之前洛伦兹变换展开的J是一个东西！！只是一个是具体实现一个是抽象符号。}
+
+\subsection{T作用在有质量粒子上}
+同样的，我们考虑三个算符作用在作用T之后的量子态。我们会发现：
+\eq{
+    \begin{aligned}&P(\mathsf{T}\mathbf{\Psi}_{k,\sigma})=0,\\&H(\mathsf{T}\mathbf{\Psi}_{k,\sigma})=M(\mathsf{T}\Psi_{k,\sigma}),\\&J_3(\mathsf{T}\Psi_{k,\sigma})=-\sigma(\mathsf{T}\Psi_{k,\sigma}),\end{aligned}
+}
+所以我们也假设有一个相位：
+\eq{
+    \mathsf{T}\Psi_{k,\sigma}=\zeta_{\sigma}\Psi_{k,-\sigma}
+}
+但是我们会发现这个相位和角动量是相关的。我们作用一个升降叫动量算符：
+\eq{
+    (-J_1\pm iJ_2)\zeta_\sigma\Psi_{k,-\sigma}=\sqrt{(j\mp\sigma)(j\pm\sigma+1)}\zeta_{\sigma\pm1}\Psi_{k,-\sigma\mp1}
+}
+我们在等式\cref{eq:representationJ}双边作用上TP的结果是：
+\begin{figure}[H]
+    \center
+    \includegraphics
+    [width=0.66\textwidth]{2025-07-16-16-03-14.png}
+    \label{fig:}
+\end{figure}
+所以我们知道，对于角动量来说时间反演的相位和角动量有关系：
+$ -\zeta_\sigma=\zeta_{\sigma\pm1} $ 所以我们的结论是：
+\eq{
+    \mathsf{T}\Psi_{k,\sigma}=\zeta(-)^{j-\sigma}\Psi_{k,-\sigma}.
+}
+\imp{变换系数}{
+    我们知道时空反演变换作用在量子态可能会产生一个相位。空间反演的相位存在真是的物理意义就是“Parity”。但是时间反演的相位并没有物理意义。
+}
+因为对于时间反演，我们系数作用T之后会变成conjugate所以可以选择可以canonical的方式小曲儿系数。并且量子态是由ray决定的所以并不改变ray。我们重新定义一个新的同一个ray里的向量：
+\eq{
+    \Psi_{k,\sigma}^{\prime}=\zeta^{1/2}\Psi_{k,\sigma}.
+}
+我们发现：
+\eq{
+    \mathsf{T}\Psi_{k,\sigma}^{\prime}=\zeta^{*1/2}\mathsf{T}\Psi_{k,\sigma}=\zeta^{*1/2}\zeta(-)^{j-\sigma}\Psi_{k,-\sigma}=(-)^{j-\sigma}\Psi_{k,-\sigma}^{\prime}.
+}
+下面我们考虑时间反演变换作用在一般的动量之后的结果是什么。我们发现，不能够像空间反演一样，因为$ \mathsf{P}k = k $但是$ \mathsf{T}k \neq k $。所以我们需要具体$ L(p) $的形式进行计算，我们使用之前的canonical的定义\cref{eq:canonicalL}进行一通计算我们发现下面的恒等式：
+\eq{
+    \begin{aligned}\mathscr{T}\operatorname{L}(p)\mathscr{T}^{-1}=\operatorname{L}(\mathscr{P}p),\\\mathscr{P}p=\left(-\mathbf{p},\sqrt{\mathbf{p}^2+M^2}\right).\end{aligned}
+}
+所以对于一般的动量的粒子的情况下：
+\eq{
+    \mathsf{T}\Psi_{p,\sigma}=\zeta(-)^{j-\sigma}\Psi_{\mathscr{P}p,-\sigma}.
+}
+
+\subsection{P作用在0质量粒子}
+这样的粒子我们使用两个本征值来定义的一个是$ k^\mu $也就是$ k^\mu = (0,0,\kappa,\kappa) $以及helicity就是$ J_3 $【也就是运动方向】本征值$ \sigma $。   
+\rmk{helicity的本身的定义其实是运动方向的自旋的强度的！！！但是我们这里定义的$ \sigma $是$ J_3 $的本征值，仅仅是现在这样的情况恰好是helicity。  }
+
+但是，当我们$ \mathsf{P} $把我们的第三个动量方向反向，那么我们的helicity其实需要反向因为运动的方向反向了。这告诉我们，所有helicity相反的0质量粒子其实都是一个粒子，因为他们可以通过一种洛伦兹变换变到，也就是我们认为这只是看粒子的不同观察者的视角。
+
+\rmk{观察之前对于有质量粒子的讨论，我们发现$ \mathsf{T},\mathsf{P} $算符作用在有质量的粒子上面都是不改变k的，所以我们可以使用一些推导技巧。但是作用在无质量的粒子会改变k所以我们需要先找到一个lorentz变换不改变k的。 }
+我们下面计算$ \mathsf{P} $中用在单粒子态上的结果。由于$ \mathscr{P} $作用在$ k^\mu $ 上面会让$ k^\mu $发生变化所以我们一般选择先研究另外的一个算符的作用：$ U(R_2^{-1})\mathrm{P} $算符，其中使用的：
+\eq{
+    U(R_2)=\exp(-i\pi J_2)\mathrm{~.}
+} 
+相当于绕着第二个轴旋转180度，这样子就让第三个轴反向了。这样子我们的$ \mathsf{P} $作用在量子态上面会让第三个动量反演，并不造成其他变换。但是我们作用了$ U(R_2^{-1}) $ 这个操作让我们的角动量和动量都会发生变化【因为$ J_2 $算符和$ J_3 $算符以及$ P_3 $算符都不对易】他们的对易关系是，根据\cref{eq:commutationrelation}可以计算出来是：
+\[
+e^{i\pi J_2} J_3 e^{-i\pi J_2} = -J_3, \qquad
+e^{i\pi J_2} P_3 e^{-i\pi J_2} = -P_3
+\]
+所以，根据这些对易的计算我们可以知道：
+\eq{
+    U(R_2^{-1})\mathsf{P}\Psi_{k,\sigma}=\eta_\sigma\Psi_{k,-\sigma}
+}
+其中k被$ \mathsf{P} $反转再被$ U(R_2^{-1}) $反转回去，而$ \sigma $则被  $ U(R_2^{-1}) $旋转走了！我们考虑这个算符会发现它作用下并不影响$ k^\mu $ 。
+
+下面我们考虑这个算符和单纯的$ \mathsf{P} $的作用之间的联系。 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % 这里我们记录我们为了读懂文章需要补充的知识点。
 

@@ -584,7 +584,7 @@ P^\mu\Psi_{p,\sigma}=p^\mu\Psi_{p,\sigma}.
 显然，我们可以选择一系列的$ \Psi_{\Lambda p,\sigma^{\prime}} $ 保证是对于洛伦兹变换是block diagonal的「其实就是找到一组不可约不等价表示捏」。\textbf{所以我们不如就考虑洛伦兹群的离散不等价不可约表示有哪些吧！而这些表示的表示空间一定程度直和可以构建出一个单粒子的其他自由度！！}
 
 我们意识到，洛伦兹变换根据约束\cref{eq:lorentzrela}并不会改变四矢量的模长，也就是动量的大小，并且对于proper orthochronous lorentz transformation在$ p^2 \leq 0 $ 的情况也不会改变$ p^0 $的符号。所以我们似乎可以定义\textbf{标准四矢量动量}。为\textbf{每一个确定的模长以及$ p^0 $负号，规定一个标准四矢量$ k^\mu $  } 然后我们使用一个和洛伦兹变换算符表征p「也就是p是则是从k变过去的」：
-\eq{
+\eq{\label{eq:separatepk}
     \Psi_{p,\sigma}\equiv N(p)U(L(p))\Psi_{k,\sigma},
 }
 \rmk{注意：$ L(p) $不是一个一般的洛伦兹变换，而是一个【仅仅作用在p指标的洛伦兹变换】而不作用在$ \sigma $指标上面。是一个抽象的符号！！ 
@@ -1079,7 +1079,7 @@ B\Psi_{k,a,b}=b\Psi_{k,a,b}.
     \pt{绕着第三个轴再转$ \phi $ 角度}
 } 
 所以这一波操作对应的洛伦兹变换【注意是洛伦兹变换，毕竟R也是个洛伦兹变换矩阵。并不是Little Group的表示】是：
-\eq{
+\eq{\label{eq:definURP}
     U(R(\hat{\mathbf{p}}))=\exp(i\phi J_3)\exp(i\theta J_2)\mathrm{~,}
 }
 
@@ -1125,11 +1125,9 @@ B\Psi_{k,a,b}=b\Psi_{k,a,b}.
 \eq{\label{eq:conserveTP}
     \begin{aligned}\mathsf{P}U\left(\Lambda,a\right)\mathsf{P}^{-1}&=U\left(\mathscr{P}\Lambda\mathscr{P}^{-1},\mathscr{P}a\right),\\\mathsf{T}U\left(\Lambda,a\right)\mathsf{T}^{-1}&=U\left(\mathscr{T}\Lambda\mathscr{T}^{-1},\mathscr{T}a\right)\end{aligned}
 }
-<<<<<<< HEAD
 \hlr{注意，上面的式子是“定义式”，但是是“合理的”。考虑到Lorentz群本身的复合关系。}这样的规则包含了一个信息，就是「P,T是守恒的」。但是，其实P并不是守恒的，只有当我们不考虑weak interaction的时候才可以是守恒的。同时T也是之后会发现在一些情况下并不是守恒的。所以，在某些情况下\cref{eq:conserveTP}并不是成立的，以及TP算符甚至应该是并不能够进行定义的！！
-=======
-\hlr{注意，上面的式子是“定义式”，但是是“合理的”。考虑到Lorentz群本身的复合关系。}这样的规则包含了一个信息，就是「P,T是守恒的」。但是，其实P并不是守恒的，只有当我们不考虑weak interaction的时候才可以是守恒的。同时T也是之后会发现在一些情况下并不是守恒的。所以，在某些情况下\cref{eq:conserveTP}并不是成立的，但是我们之后默认这个变换关系是成立的。
->>>>>>> 572aac2d4ec51bbbad08dcaec53ec787cf671ed1
+
+\rmk{再次注意，\hlr{上面的定义只定义了TP算符作用在算符上面的结果，没有定义作用在量子态上面的结果}，但是由于量子态是一些算符的本征态，所以\hlr{我们一般使用对易关系可以推导出算符作用在量子态上面的结果}}
 
 当我们考虑\cref{eq:conserveTP}里面的$ \Lambda $变换是一个无穷小变换的时候我们就可以研究TP算符和我们之前定义的J和动量P算符之间的对易关系，结论是：
 \eq{
@@ -1149,7 +1147,7 @@ B\Psi_{k,a,b}=b\Psi_{k,a,b}.
     空间反演变换是linear \& Unitary的算符；时间反演变换是anti-linear \& anti-Unitary的算符。
 } 
 所以根据这个我们可以写出最后的对易关系，或者说就是JP算符在TP变换之下的变换。我们给出下面的对易关系：
-\eq{
+\eq{\label{eq:TPcommutation}
     \begin{gathered}P\mathbf{J}P^{-1}=+\mathbf{J},\\P\mathbf{K}P^{-1}=-\mathbf{K},\\P\mathbf{P}P^{-1}=-\mathbf{P},\\T\mathbf{J}T^{-1}=-\mathbf{J},\\T\mathbf{K}T^{-1}=+\mathbf{K},\\T\mathbf{P}T^{-1}=-\mathbf{P},\end{gathered}
 }
 以及对Hamiltonian的对易关系是：
@@ -1164,7 +1162,7 @@ B\Psi_{k,a,b}=b\Psi_{k,a,b}.
 下面我们考虑T和P是怎么作用在单粒子态上面的。
 
 \subsection{P作用在有质量粒子上}
-我们的单粒子态使用P，H以及$ J_3 $算符的本征态，$ 0,M,\sigma $进行标记。我们根据前面的对易关系，我们知道了解P算符作用之后的量子态只需要了解P算符作用之后这些算符的本征值有什么变化就好。
+我们的单粒子态使用P，H以及$ J_3 $算符的本征态，$ 0,M,\sigma $进行标记。我们根据前面的对易关系，我们知道了解P算符作用之后的量子态只需要了解P算符作用之后这些算符的本征值有什么变化就好。这个就需要我们使用对易关系\cref{eq:TPcommutation}进行计算。我们知道：
 
 由于P算符作用会让动量反转能量不变，并且也会角动量也是不变的。所以应该就是乘上一个相位：
 \eq{
@@ -1186,9 +1184,9 @@ B\Psi_{k,a,b}=b\Psi_{k,a,b}.
 \rmk{重申，这里的$ J_3 $和之前洛伦兹变换展开的J是一个东西！！只是一个是具体实现一个是抽象符号。}
 
 \subsection{T作用在有质量粒子上}
-同样的，我们考虑三个算符作用在作用T之后的量子态。我们会发现：
+同样的，我们考虑三个算符作用在作用T之后的量子态。根据对易关系\cref{eq:TPcommutation}我们会发现：
 \eq{
-    \begin{aligned}&P(\mathsf{T}\mathbf{\Psi}_{k,\sigma})=0,\\&H(\mathsf{T}\mathbf{\Psi}_{k,\sigma})=M(\mathsf{T}\Psi_{k,\sigma}),\\&J_3(\mathsf{T}\Psi_{k,\sigma})=-\sigma(\mathsf{T}\Psi_{k,\sigma}),\end{aligned}
+    \begin{aligned}&P(\mathsf{T}\Psi_{k,\sigma})=0,\\&H(\mathsf{T}\Psi_{k,\sigma})=M(\mathsf{T}\Psi_{k,\sigma}),\\&J_3(\mathsf{T}\Psi_{k,\sigma})=-\sigma(\mathsf{T}\Psi_{k,\sigma}),\end{aligned}
 }
 所以我们也假设有一个相位：
 \eq{
@@ -1232,14 +1230,14 @@ $ -\zeta_\sigma=\zeta_{\sigma\pm1} $ 所以我们的结论是：
 
 \subsection{P作用在0质量粒子}
 这样的粒子我们使用两个本征值来定义的一个是$ k^\mu $也就是$ k^\mu = (0,0,\kappa,\kappa) $以及helicity就是$ J_3 $【也就是运动方向】本征值$ \sigma $。   
-<<<<<<< HEAD
-\rmk{helicity的本身的定义其实是运动方向的自旋的强度的！！！但是我们这里定义的$ \sigma $是$ J_3 $的本征值，仅仅是现在这样的情况恰好是helicity。  }
+
+\rmk{helicity的本身的定义其实是运动方向的自旋的强度的！！！但是我们这里定义的$ \sigma $是$ J_3 $的本征值，仅仅是现在这样的情况恰好是helicity。 btw Helicity的定义应该是$ \mathbf{J}\cdot \hat{\mathbf{k}} $  }
 
 但是，当我们$ \mathsf{P} $把我们的第三个动量方向反向，那么我们的helicity其实需要反向因为运动的方向反向了。这告诉我们，所有helicity相反的0质量粒子其实都是一个粒子，因为他们可以通过一种洛伦兹变换变到，也就是我们认为这只是看粒子的不同观察者的视角。
 
 \rmk{观察之前对于有质量粒子的讨论，我们发现$ \mathsf{T},\mathsf{P} $算符作用在有质量的粒子上面都是不改变k的，所以我们可以使用一些推导技巧。但是作用在无质量的粒子会改变k所以我们需要先找到一个lorentz变换不改变k的。 }
 我们下面计算$ \mathsf{P} $中用在单粒子态上的结果。由于$ \mathscr{P} $作用在$ k^\mu $ 上面会让$ k^\mu $发生变化所以我们一般选择先研究另外的一个算符的作用：$ U(R_2^{-1})\mathrm{P} $算符，其中使用的：
-\eq{
+\eq{\label{eq:defineURtwo}
     U(R_2)=\exp(-i\pi J_2)\mathrm{~.}
 } 
 相当于绕着第二个轴旋转180度，这样子就让第三个轴反向了。这样子我们的$ \mathsf{P} $作用在量子态上面会让第三个动量反演，并不造成其他变换。但是我们作用了$ U(R_2^{-1}) $ 这个操作让我们的角动量和动量都会发生变化【因为$ J_2 $算符和$ J_3 $算符以及$ P_3 $算符都不对易】他们的对易关系是，根据\cref{eq:commutationrelation}可以计算出来是：
@@ -1253,26 +1251,97 @@ e^{i\pi J_2} P_3 e^{-i\pi J_2} = -P_3
 }
 其中k被$ \mathsf{P} $反转再被$ U(R_2^{-1}) $反转回去，而$ \sigma $则被  $ U(R_2^{-1}) $旋转走了！我们考虑这个算符会发现它作用下并不影响$ k^\mu $ 。
 
-下面我们考虑这个算符和单纯的$ \mathsf{P} $的作用之间的联系。 
+下面我们思考一般的$ \Psi_{p,\sigma} $ 被$ \mathsf{P} $作用上的结果。我们首先考虑对于0质量粒子来说\cref{eq:separatepk} 的形式是：
+\eq{
+    \Psi_{p,\sigma} = \sqrt{\frac{\kappa}{p^0}}U(R(\hat{\mathbf{p}})B(\frac{|\mathbf{p}|}{\kappa}))\Psi_{k,\sigma}
+}
+我们再次注意记号$ \mathbf{p} $指的是考虑前三个维度的分量。然后我们把上面式子作用上$ \mathsf{P} $矩阵，所以我们有：
+\eq{
+    \mathsf{P}\Psi_{p,\sigma} = \mathsf{P}\sqrt{\frac{\kappa}{p^0}}U(R(\hat{\mathbf{p}})B(\frac{|\mathbf{p}|}{\kappa}))\Psi_{k,\sigma}
+}
+我们意识到由于对易关系\cref{eq:TPcommutation}我们知道角动量算符是和$ \mathsf{P} $对易的，所以我们可以把$ \mathsf{P} $移动到里面一点，然后插入一个$ R_2 R_2^{-1} $ ：
+\eq{
+    \mathsf{P}\Psi_{p,\sigma} = \sqrt{\frac{\kappa}{p^0}}U(R(\hat{\mathbf{p}}))U(R_2 R_2^{-1})\mathsf{P}U(B(\frac{|\mathbf{p}|}{\kappa}))\Psi_{k,\sigma}
+}
+下面，我们意识到算符$ U(R_2^{-2})\mathsf{P} $和$ B(u) $ 是对易的。因为这个洛伦兹变换矩阵是对易的，这是可以通过定义的具体计算得到的。所以我们有结论：
+\eq{\label{eq:deductTzeromass}
+    \begin{gathered}P\Psi_{p,\sigma}=\sqrt{\frac{\kappa}{p^0}}U\left(R(\hat{p})R_2B\left(\frac{|\mathbf{p}|}{\kappa}\right)\right)U(R_2^{-1})\mathrm{P}\Psi_{k,\sigma}\\=\sqrt{\frac{\kappa}{p^{0}}}\eta_{\sigma}U\left(R(\hat{p})R_{2}B\left(\frac{|\mathbf{p}|}{\kappa}\right)\right)\Psi_{k,-\sigma}.\end{gathered}
+}
+我们分析这个变换，其中$ U\left(R(\hat{p})R_{2}\right) $是一个转动变换把第三个轴转动到$ -\hat{\mathbf{p}} $的位置，但是这个操作并不等价于标准的$ U(R(-\hat{\mathbf{p}})) $ 我们是使用几个定义\cref{eq:definURP,eq:defineURtwo}可以进行计算发现：
+\eq{\label{eq:minuspdefine}
+    U(R(-\hat{\mathbf{p}}))=\exp\left(i(\phi\pm\pi)J_3\right)\exp\left(i(\pi-\theta)J_2\right)
+}
+所以这两个算符的关系是：
+\eq{
+    \begin{aligned}
+&U^{-1}\left(R(-\hat{\mathbf{p}})\right) \, U\left(R(\hat{\mathbf{p}})\, R_2\right) \\
+&= \exp\left(-i(\pi - \theta) J_2\right) 
+\exp\left(-i(\phi \pm \pi) J_3\right) 
+\exp(i\phi J_3)\exp(i\theta J_2)\exp(-i\pi J_2) \\
+&= \exp\left(-i(\pi - \theta) J_2\right) 
+\exp(\mp i\pi J_3) 
+\exp\left(-i(\pi - \theta) J_2\right).
+\end{aligned}
+}
+所以我们发现：
+\eq{
+    U\left(R(\mathbf{\hat{p}})R_2\right)=U\left(R(-\mathbf{\hat{p}})\right)\exp(\pm i\pi J_3).
+}
+我们把这个结果带入\cref{eq:deductTzeromass}:
+\eq{
+    P\Psi_{p,\sigma}= \sqrt{\frac{\kappa}{p_0}}U\left(R(-\mathbf{\hat{p}})\right)\exp(\pm i\pi J_3 ) U(B) \Psi_{k,-\sigma}
+}   
+由于我们知道$ J_3 $算符代表着演着第三轴的转动仅仅作用x-y平面，而$ B(u) $是第三轴的boost仅仅作用的z和时间维度，所以这两个Lorentz变换矩阵应该是对易的。所以对应的算符根据Lorentz变换的复合关系\cref{eq:lorentzgroup}需要是对易的。所以我们的结论是：
+\eq{
+    P\Psi_{p,\sigma}&= \sqrt{\frac{\kappa}{p_0}}U\left(R(-\mathbf{\hat{p}})B\right)\exp(\pm i\pi J_3 )  \Psi_{k,-\sigma}\\
+    &= \sqrt{\frac{\kappa}{p_0}} U(L(-p))\exp(\pm i\pi J_3 )  \Psi_{k,-\sigma}
+}
+最后我们发现$ L(-p) $的作用$ k^\mu $旋转到$ -p^\mu $的方向，也就等价于乘上$ \mathscr{P} $所以我们有：
+\eq{
+    \mathsf{P}\Psi_{p,\sigma}=\eta_{\sigma}\exp(\mp i\pi\sigma)\Psi_{\mathscr{P}p,-\sigma}
+}
+这里面的$ \pm $来自于这里对于 \cref{eq:minuspdefine}的定义里面原先的$ \phi $的大小。如果$ \phi $太大就需要减，太小就需要加。也就是当$ \mathbf{p} $在第二个轴的分量是正就取上面的；负就取下面的。这是来源于canonical的$ R(p) $的定义。  
+
+\hlr{这会导致对于半整数spin的粒子来说parity会出现一个跳变！}
+
+\subsection{T作用在0质量粒子}
+
+同样的我们利用对易关系\cref{eq:TPcommutation}我们可以知道$ \sfT $ 算符作用会让动量和自旋都有一个反转，但是我们可以使用之前的$ U(R_2^{-1}) $算符来让动量反转，自旋也转过来「因为$ J_2,J_3 $并不对易 」所以我们得到：
+\eq{
+    U(R_2^{-1})\sfT\Psi_{k,\sigma}=\zeta_\sigma\Psi_{k,\sigma}
+}
+同样的由于算符$ U(R_2^{-1})\sfT $ 也正好和$ B(u) $ 是对易的。所以我们使用同样的推导知道：
+\eq{
+    \mathsf{T}\Psi_{p,\sigma}=\sqrt{\frac{\kappa}{p_0}}U\left[R(\hat{p})R_2B\left(\frac{|\mathbf{p}|}{\kappa}\right)\right]\zeta_\sigma\Psi_{k,\sigma}.
+}
+最后的结论是：
+\eq{
+    \mathbb{T}\Psi_{p,\sigma}=\zeta_\sigma\exp(\pm i\pi\sigma)\Psi_{\mathscr{P}_{p,\sigma}}.
+}
+同样的正负号代表的$ \mathbf{p} $的第二个轴上面的分量是正是负。 
 
 
+\subsection{$ \sfT^2 $作用讨论 }
+对于有质量的粒子我们可以进行推导发现：
+\eq{
+    \mathsf{T}^2\Psi_{p,\sigma}=\mathsf{T}\zeta(-)^{j-\sigma}\Psi_{p,-\sigma}=\zeta^*(-)^{j-\sigma}\zeta(-)^{j+\sigma}\Psi_{p,\sigma}
+}
+结论是：
+\eq{
+    \mathsf{T}^2\Psi_{p,\sigma} = (-)^{2j}\Psi
+}
+而对于没有质量的粒子我们有类似的推导就是：
+\eq{
+    \mathsf{T}^2\Psi_{p,\sigma}=(-)^{2|\sigma|}\Psi_{p,\sigma}.
+}
+所以结论是当$ \sfT^2 $作用在一个粒子上面的时候，都会给出$ (-)^{2 \text{spin}} $的数值。
 
+\imp{Kramers Degeneracy}{
+    我们考虑一个spin half integer的体系，也就是奇数个spin half integer的粒子体系。
+\bigskip
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    这个体系必然存在$ \sfT^2 \Psi = -\Psi $的结果。我们会发现如果$ \Psi $是Hamiltonian的本征态，那么还有一个不一样的本征态是$ \sfT \Psi $   
+}
 
 
 

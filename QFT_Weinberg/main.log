@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  17 JUL 2025 17:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  17 JUL 2025 18:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,15 +1451,32 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [38]
 Chapter 2.
-(./mt.tex)
+(./mt.tex
+Overfull \hbox (29.73222pt too wide) in paragraph at lines 9--26
+\TU/HanziPenSC(0)/b/n/12 复 习 一 下 其 中 $\OML/cmm/m/it/12 W\OT1/cmr/m/n/12 (^^C\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 )$ \TU/HanziPenSC(0)/b/n/12 是 \TU/lmr/m/n/12 Wigner Rotation\TU/HanziPenSC(0)/b/n/12 ，|  定 义 是：| \TU/lmr/m/n/12 eq. ([]1.102[]) \TU/HanziPenSC(0)/b/n/12 也 就 是：| $\OML/cmm/m/it/12 W\OT1/cmr/m/n/12 (^^C\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 L[]\OT1/cmr/m/n/12 (^^C\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )^^C\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :$
+ []
+
+
 
 [39
 
-]
+])
+Overfull \hbox (5.75113pt too wide) in paragraph at lines 52--92
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (11.59483pt too wide) in paragraph at lines 52--92
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] \TU/HanziPenSC(0)/b/n/12 所 以 我 们 现 在 并 不 认 为 $\OT1/cmr/m/n/12 ^^I[]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ^^I[]$
+ []
+
+
+
+[40]
 Chapter 3.
 (./sb.tex)
 
-[40
+[41
 
 ] (./main.aux)
  ***********
@@ -1474,15 +1491,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3D0DB60CE60C8186A7CB5CE57838F5BF;3453.
+(rerunfilecheck)             Checksum: A33CC8AB1ABF00D33DBADB405BBCCB6D;3602.
  ) 
 Here is how much of TeX's memory you used:
- 35847 strings out of 468527
- 791617 string characters out of 5447700
+ 35855 strings out of 468527
+ 791754 string characters out of 5447700
  1226907 words of memory out of 5000000
- 63530 multiletter control sequences out of 15000+600000
+ 63538 multiletter control sequences out of 15000+600000
  643189 words of font info for 153 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,22n,121p,580b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,22n,121p,583b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (42 pages).
+Output written on main.pdf (43 pages).

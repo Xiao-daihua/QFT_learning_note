@@ -1,1 +1,52 @@
-\hlr{这里我们讨论第三章的散射理论。}
+这里我们讨论Weinberg第三章的散射理论。这里我们开始考虑粒子之间的相互作用。考虑粒子从无穷远到很近的地方发生相互作用然后再到无穷远。
+
+\section{In and Out States}
+对于没有相互作用的多粒子态，我们可以认为是单粒子态的直积。那么对于一个有质量的多粒子态，我们进行Lorentz变换可以知道是：
+\eq{\label{eq:multitrans}
+    \begin{aligned}
+        U(\Lambda,a)&\Psi_{_{p_{1},\sigma_{1},\eta_{1};p_{2},\sigma_{2},\eta_{2};\cdots}}=\exp\left(-ia_{\mu}(p_{1}^{\mu}+p_{2}^{\mu}+\cdots)\right)\\&\times\sqrt{\frac{(\overline{\Lambda}p_{1})^{0}(\overline{\Lambda}p_{2})^{0}\cdots}{p_{1}^{0}p_{2}^{0}\cdots}}\sum_{\sigma_{1}^{\prime}\sigma_{2}^{\prime}\cdots}D_{\sigma_{1}^{\prime}\sigma_{1}}^{(j_{1})}\left(W(\Lambda,p_{1})\right)D_{\sigma_{2}^{\prime}\sigma_{2}}^{(j_{2})}\left(W(\Lambda,p_{2})\right)\\&\times\Psi_{_{\Lambda p_{1},\sigma_{1}^{\prime},n_{1};\Lambda p_{2},\sigma_{2}^{\prime},n_{2};\cdots}}
+    \end{aligned}
+}
+复习一下其中$ W(\Lambda,p) $ 是Wigner Rotation，定义是：\cref{eq:Wignerrotation}也就是：$ W(\Lambda,p)=L^{-1}(\Lambda p)\Lambda L(p). $ 。其中D矩阵是SO(3)群的表示矩阵定义为：\cref{eq:Dtrans}。对于无质量的粒子是另一个表示就是$ \delta_{\sigma,\sigma'} exp(i \sigma \theta(\Lambda,p))$。同样的我们定义一个合理的normalization是：
+\eq{
+\begin{aligned}
+&\left(\Psi_{p_{1}^{\prime},\sigma_{1}^{\prime},n_{1}^{\prime};\,
+           p_{2}^{\prime},\sigma_{2}^{\prime},n_{2}^{\prime};\cdots},
+       \Psi_{p_{1},\sigma_{1},n_{1};\,
+           p_{2},\sigma_{2},n_{2};\cdots}\right) \\
+&= \delta^3(\mathbf{p}_1^{\prime}-\mathbf{p}_1)
+   \delta_{\sigma_1^{\prime}\sigma_1}
+   \delta_{n_1^{\prime}n_1}
+   \delta^3(\mathbf{p}_2^{\prime}-\mathbf{p}_2)
+   \delta_{\sigma_2^{\prime}\sigma_2}
+   \delta_{n_2^{\prime}n_2}
+   \cdots \\
+&\quad \pm\ \text{permutations}
+\end{aligned}
+} 
+这里面考虑了所有permutation的情况。但是注意，会有$ \pm $是因为会有bosonic的情况以及fermionic的情况。
+
+\imp{多粒子态简洁记号}{
+    为了进行简洁的书写多粒子态我们一般用这样的一个记号来表示：
+\eq{
+    (\Psi_{\alpha^{\prime}},\Psi_\alpha)=\delta(\alpha^{\prime}-\alpha)
+}
+注意这里$ \delta(\alpha^{\prime}-\alpha) $ 是一个记号并不是delta函数。并且积分我们也可以这么写：
+\eq{
+    \int d\alpha\cdots\equiv\sum_{n_{1}\sigma_{1}n_{2}\sigma_{2}\cdots}\int d^{3}p_{1}d^{3}p_{2}\cdots.
+}
+所以上面的内积结果completeness equation可以写作：
+\eq{
+    \Psi=\int d\alpha\Psi_\alpha(\Psi_\alpha,\Psi).
+}
+}
+我们考虑一个特殊的时间平移Lorentz变换也就是$ \tensor{\Lambda}{^\mu_\nu} = \delta^\mu_\nu $以及$ a^\mu = (0,0,0,\tau) $。在这个情况下我们的能量可以根据\cref{eq:multitrans}写成：
+\eq{
+    H\Psi_\alpha=E_\alpha\Psi_\alpha
+}
+其中$ E_\alpha = p^0_1+p^0_2+... $ 。
+\imp{In and Out}{
+    描述散射过程我们需要考虑结果和初始。这两个阶段粒子都应该没有相互作用了，并且时间是$ - \infty $以及$ +\infty $的点。所以我们称呼这两个时候的态是：
+    $ \Psi_\alpha^+ $以及$ \Psi_\alpha^- $。    
+}
+\hlr{下面我们使用Heisenberg Picture进行考虑，我们不认为量子态是定义在一个等时面的。而是描述整个时空全部的。量子态是与时间空间无关的向量。}所以我们现在并不认为$  \Psi_\alpha^+, \Psi_\alpha^- $ 【虽然注意，我们这里研究的是动量本征态，更应该用Heisenberg picture来描述】

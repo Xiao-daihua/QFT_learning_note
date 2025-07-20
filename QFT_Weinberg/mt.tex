@@ -1,6 +1,8 @@
 这里我们讨论Weinberg第三章的散射理论。这里我们开始考虑粒子之间的相互作用。考虑粒子从无穷远到很近的地方发生相互作用然后再到无穷远。
 
 \section{In and Out States}
+
+\subsection{无相互作用多粒子态}
 对于没有相互作用的多粒子态，我们可以认为是单粒子态的直积。那么对于一个有质量的多粒子态，我们进行Lorentz变换可以知道是：
 \eq{\label{eq:multitrans}
     \begin{aligned}
@@ -25,7 +27,7 @@
 \end{aligned}
 } 
 这里面考虑了所有permutation的情况。但是注意，会有$ \pm $是因为会有bosonic的情况以及fermionic的情况。
-
+\rmk{我们注意，上面的delta函数都是动量空间三维的。因为我们考虑的都是【同一质量的粒子对应的量子态】。我们不考虑不同质量的粒子量子态的内积。结果是delta函数也很合理，毕竟所有Hermite算符不同本征值的本征函数是正交的。但是系数是1是因为我们取了一个特殊normalization。这个内容具体请复习\cref{sec:normalization}}
 \imp{多粒子态简洁记号}{
     为了进行简洁的书写多粒子态我们一般用这样的一个记号来表示：
 \eq{
@@ -40,13 +42,106 @@
     \Psi=\int d\alpha\Psi_\alpha(\Psi_\alpha,\Psi).
 }
 }
+\rmk{注意，我们之前讨论的无相互作用的多粒子态，我们使用的是能动量四矢量+自旋or helicity进行标记说明\hlr{我们考虑满足这个变换的量子态一定是能动量的本征态。}}
 我们考虑一个特殊的时间平移Lorentz变换也就是$ \tensor{\Lambda}{^\mu_\nu} = \delta^\mu_\nu $以及$ a^\mu = (0,0,0,\tau) $。在这个情况下我们的能量可以根据\cref{eq:multitrans}写成：
 \eq{
     H\Psi_\alpha=E_\alpha\Psi_\alpha
 }
 其中$ E_\alpha = p^0_1+p^0_2+... $ 。
-\imp{In and Out}{
-    描述散射过程我们需要考虑结果和初始。这两个阶段粒子都应该没有相互作用了，并且时间是$ - \infty $以及$ +\infty $的点。所以我们称呼这两个时候的态是：
-    $ \Psi_\alpha^+ $以及$ \Psi_\alpha^- $。    
+
+
+\subsection{In and Out States}
+
+\hlr{现在我们不考虑无相互作用的粒子，而是考虑一个有相互作用的散射过程。}但是这个过程有个特点，就是在我们认为在$ - \infty $以及$ +\infty $的时间，粒子相当于没有相互作用的。  
+
+\imp{In and Out的基本思路}{
+    描述散射过程我们需要考虑结果和初始。这两个阶段粒子都应该没有相互作用了，并且时间是$ - \infty $以及$ +\infty $的点。
+    
+    所以对于散射过程我们可以定义两个量子态$  \Psi_\alpha^+, \Psi_\alpha^- $我们希望这两个量子态表征散射的初始状态和结果状态。所以我们赋予要求：
+    \itm{
+        \pt{这两个量子态对于「在$ \pm\infty $ 时间的观察者来说，等价于$ \Psi_\alpha $的量子态 」}
+    }
 }
-\hlr{下面我们使用Heisenberg Picture进行考虑，我们不认为量子态是定义在一个等时面的。而是描述整个时空全部的。量子态是与时间空间无关的向量。}所以我们现在并不认为$  \Psi_\alpha^+, \Psi_\alpha^- $ 【虽然注意，我们这里研究的是动量本征态，更应该用Heisenberg picture来描述】
+\rmk{
+    我们进行三个解读：
+    \itm{
+        \pt{首先，我们一直使用的是Heisenberg Picture进行描述量子态。\hlr{我们不认为量子态是定义在一个等时面的。而是描述整个时空全部的。量子态是与时间空间无关的向量。}但是我们知道不同观察者观察到的同一个量子态，但是观测到的是不同Hilbert空间上的矢量。}
+    }
+
+    一个具体的例子，考虑一个观察者B，他在A的未来时刻$ t_B = t_A - \tau $【注意这里的符号】。当一个事件在A的时间$ t_A = \tau $ 发生的时候，对于B来说这个时间就在$ t_B = 0 $发生。
+    
+    对于未来的观察者来说，如果A观察者在某一个时刻观察到了一个量子态$ \Psi_\alpha $，那么对于B来说，他在这个事件发生同时观测到的量子态就是$ U(Id,-\tau) \Psi_\alpha = e^{-iH\tau} \Psi$ 。
+
+    这也就是时间平移算符的正负号的来源，请注意。
+\itm{
+    \pt{第二个值得注意的是，我们既然如此，并不存在绝对的量子态，而是存在不同时间的量子态的相对关系，除非我们定义一个时间点。}
+}
+但是，这里我们知道不论定义哪个时间点。我们对于负无穷时间的观察者，如果时间发生在自己的时间0点（当然选哪个有限的时间都是一样的。）那么一般的观察者会知道这个事件发生在$ -\infty $的时间点。对于正无穷时间的观察者来说，他会知道这个事件发生在$ +\infty $的时间点。所以$ t_{\mp\infty} = t_A -(\mp \infty) $。这个才是正确的洛伦兹变换，以及怎么理解这件事。    
+
+\itm{
+    \pt{还有值得注意的是：什么叫"在$ \infty $时间等价于无相互作用粒子态"。因为我们考虑的量子态都是能动量本征态，那么由于不确定性原理，这样的量子态必然是弥散在时间和空间上面的。}
+}
+
+从数学的角度，如果我们直接对于$ \Psi_\alpha $量子态进行时间演化。我们会得到的$  U(Id,-\tau) = e^{-iH\tau}= e^{-E_\alpha \tau} $就是一个相位。是没有意义的，因为相差相位的量子态是同一个量子态。
+
+所以我们需要额外技术解决这个问题。我们将考虑“\hlr{在波包的意义下}，量子态在$ \infty $时间等价于无相互作用粒子”。具体写出来就是，我们定义一个波包的superposition的系数是$ g(\alpha) $并要求这个相位满足：【连续的叠加一些在有限范围$ \Delta E $的量子态 】
+在这个的基础上我们可以定义设么叫：【在$ \infty $时间等价于无相互作用粒子态 】公式表达是：
+\eq{
+    \exp(-iH\tau)\int d\alpha\mathrm{~g}(\alpha)\Psi_\alpha^\pm=\int d\alpha\mathrm{~e}^{-iE_\alpha\tau}g(\alpha)\Psi_\alpha^\pm
+}
+分别对于$ \tau \gg 1/\Delta E $ 和$ \tau $远小于$ -1/\Delta E $
+\YL{【不知道为啥，但是远小于符号就是打不出来！！】}
+
+}
+
+在上面充分的讨论的基础上我们就可以严格的定义in and out states了。
+
+\imp{In and Out states严格定义}{
+    我们研究一个散射过程之中我们使用的Hamiltonian可以写作下面的形式：
+    \eq{
+        H = H_0 + V
+    }
+    其中$ H_0 $代表没有相互作用的部分，而$ V $代表粒子之间的相互作用。并且我们要求：
+    \itm{
+        \pt{$ H $和$ H_0 $ 必须有一模一样的spectrum。也就是两个Hamiltonian的本征值是一样的。 }
+    }
+    这个要求本质上就是要求$ H_0 $并不是单纯的$ H $把所有的势能项直接删掉，我们需要定义一个新的质量，保证新的质量定义之下$ H_0 $ 的spectrum和之前的一样。为了定义新的质量减去的一些term要放到V里面去。  
+    
+    \defi{
+      无相互作用多粒子态
+
+      无相互作用的多粒子处于无相互作用的Hamiltonian也就是$ H_0 $ 的本征态，$ \Phi_\alpha $满足：
+      \eq{
+        H_0\Phi_x=E_x\Phi_x,\quad (\Phi_{x^{\prime}},\Phi_x)=\delta(\alpha^{\prime}-\alpha).
+      } 
+    }
+
+    由于两个Hamiltonian有一样的spectrum所以我们下面可以定义In and Out states满足下面两个条件：
+    \begin{enumerate}
+        \item 【对于$ H $来说 】和$ \Phi_\alpha $ 对于$ H_0 $来说有一样本征值的量子态$ \Phi_{\alpha}^{\pm} $也就是说：
+        \eq{
+            H\Psi_\alpha^\pm=E_\alpha\Psi_\alpha^\pm
+        }
+        \item 在$ \infty $等价于$ \Phi_\alpha $态：
+        \eq{
+            \int d\alpha\mathrm{~}e^{-iE_{x}\tau}g(\alpha)\Psi_{\alpha}^{\pm}\to\int d\alpha\mathrm{~}e^{-iE_{x}\tau}g(\alpha)\Phi_{\alpha}
+        }
+        分别对于$ \tau \to \mp \infty $。注意$ \Psi^+_\alpha $是in state对应的是$ \tau = -\infty $ 。
+        \line
+        对于这个关系我们有一个形式化的算符表达：
+        \eq{
+            \exp(-iH\tau)\int d\alpha\mathrm{~g}(\alpha)\Psi_\alpha^\pm\to\exp(-iH_0\tau)\int d\alpha\mathrm{~g}(\alpha)\Phi_\alpha
+        }
+        这个式子我们可以写成：
+        \eq{\label{eq:timeinoutstate}
+            \Psi_{\alpha}{}^{\pm}=\Omega(\mp\infty)\Phi_{\alpha},
+        }
+        其中我们定义：
+        \eq{
+            \Omega(\tau)\equiv\exp(+iH\tau)\exp(-iH_0\tau).
+        }
+        注意这个仅仅是一个形式化的表达。等式\cref{eq:timeinoutstate}是在「考虑波包」的意义下成立的。
+    \end{enumerate}
+}
+
+

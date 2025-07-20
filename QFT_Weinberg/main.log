@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  17 JUL 2025 18:05
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  20 JUL 2025 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1366,30 +1366,30 @@ File: 2025-07-09-17-25-47.png Graphic file (type bmp)
 [20]
 
 [21]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 717.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 718.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 830--830
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--830
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--830
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
 
  []
 
 
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 854--854
+Underfull \hbox (badness 10000) in paragraph at lines 855--855
 
  []
 
@@ -1404,7 +1404,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 854--854
 [27]
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
 
  []
 
@@ -1413,7 +1413,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
 [29]
 
 [30]
-Underfull \hbox (badness 2142) in paragraph at lines 1112--1112
+Underfull \hbox (badness 2142) in paragraph at lines 1113--1113
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
@@ -1435,15 +1435,15 @@ File: 2025-07-16-16-03-14.png Graphic file (type bmp)
 [36]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1324.
+(hyperref)                removing `math shift' on input line 1325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1324.
+(hyperref)                removing `superscript' on input line 1325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1324.
+(hyperref)                removing `math shift' on input line 1325.
 
 
 
@@ -1452,7 +1452,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [38]
 Chapter 2.
 (./mt.tex
-Overfull \hbox (29.73222pt too wide) in paragraph at lines 9--26
+Overfull \hbox (29.73222pt too wide) in paragraph at lines 11--28
 \TU/HanziPenSC(0)/b/n/12 复 习 一 下 其 中 $\OML/cmm/m/it/12 W\OT1/cmr/m/n/12 (^^C\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 )$ \TU/HanziPenSC(0)/b/n/12 是 \TU/lmr/m/n/12 Wigner Rotation\TU/HanziPenSC(0)/b/n/12 ，|  定 义 是：| \TU/lmr/m/n/12 eq. ([]1.102[]) \TU/HanziPenSC(0)/b/n/12 也 就 是：| $\OML/cmm/m/it/12 W\OT1/cmr/m/n/12 (^^C\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 L[]\OT1/cmr/m/n/12 (^^C\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )^^C\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :$
  []
 
@@ -1460,23 +1460,32 @@ Overfull \hbox (29.73222pt too wide) in paragraph at lines 9--26
 
 [39
 
-])
-Overfull \hbox (5.75113pt too wide) in paragraph at lines 52--92
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+]
+Underfull \hbox (badness 3826) in paragraph at lines 95--95
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
 
-Overfull \hbox (11.59483pt too wide) in paragraph at lines 52--92
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] \TU/HanziPenSC(0)/b/n/12 所 以 我 们 现 在 并 不 认 为 $\OT1/cmr/m/n/12 ^^I[]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ^^I[]$
+Underfull \hbox (badness 1953) in paragraph at lines 95--95
+[]\TU/HanziPenSC(0)/b/n/12 从 数 学 的 角 度，|  如 果 我 们 直 接 对 于 $\OT1/cmr/m/n/12 ^^I[]$ \TU/HanziPenSC(0)/b/n/12 量 子 态 进 行 时 间 演 化。|  我 们 会 得 到 的
  []
 
 
 
 [40]
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+
+ []
+
+
+
+[41])
+
+[42]
 Chapter 3.
 (./sb.tex)
 
-[41
+[43
 
 ] (./main.aux)
  ***********
@@ -1491,15 +1500,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A33CC8AB1ABF00D33DBADB405BBCCB6D;3602.
+(rerunfilecheck)             Checksum: CD334B7D60D8BE5D9AD380D161999A4E;3892.
  ) 
 Here is how much of TeX's memory you used:
- 35855 strings out of 468527
- 791754 string characters out of 5447700
+ 35888 strings out of 468527
+ 793243 string characters out of 5447700
  1226907 words of memory out of 5000000
- 63538 multiletter control sequences out of 15000+600000
+ 63571 multiletter control sequences out of 15000+600000
  643189 words of font info for 153 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,22n,121p,583b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (43 pages).
+Output written on main.pdf (45 pages).

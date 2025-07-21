@@ -116,18 +116,25 @@
       } 
     }
 
-    由于两个Hamiltonian有一样的spectrum所以我们下面可以定义In and Out states满足下面两个条件：
-    \begin{enumerate}
+    由于两个Hamiltonian有一样的spectrum所以我们下面可以定义In and Out state:
+\defi{
+  in and out states定义
+
+  in and out states是满足下面两个条件的量子态：
+ \begin{enumerate}
         \item 【对于$ H $来说 】和$ \Phi_\alpha $ 对于$ H_0 $来说有一样本征值的量子态$ \Phi_{\alpha}^{\pm} $也就是说：
         \eq{
             H\Psi_\alpha^\pm=E_\alpha\Psi_\alpha^\pm
         }
         \item 在$ \infty $等价于$ \Phi_\alpha $态：
-        \eq{
+        \eq{\label{eq:secondconditiontofreepartical}
             \int d\alpha\mathrm{~}e^{-iE_{x}\tau}g(\alpha)\Psi_{\alpha}^{\pm}\to\int d\alpha\mathrm{~}e^{-iE_{x}\tau}g(\alpha)\Phi_{\alpha}
         }
         分别对于$ \tau \to \mp \infty $。注意$ \Psi^+_\alpha $是in state对应的是$ \tau = -\infty $ 。
-        \line
+
+    \end{enumerate}
+
+}
         对于这个关系我们有一个形式化的算符表达：
         \eq{
             \exp(-iH\tau)\int d\alpha\mathrm{~g}(\alpha)\Psi_\alpha^\pm\to\exp(-iH_0\tau)\int d\alpha\mathrm{~g}(\alpha)\Phi_\alpha
@@ -141,7 +148,31 @@
             \Omega(\tau)\equiv\exp(+iH\tau)\exp(-iH_0\tau).
         }
         注意这个仅仅是一个形式化的表达。等式\cref{eq:timeinoutstate}是在「考虑波包」的意义下成立的。
-    \end{enumerate}
 }
+下面我们讨论这样的in and out states满足什么样的性质:
+\bigskip
 
+\hlr{性质1: in and out states是互相正交归一的量子态}
 
+我们考虑in和in states或者out 和 out states之间的内积，我们会发现根据\cref{eq:secondconditiontofreepartical}存在in and out states的内积和自由多粒子态的内积之间的关系：
+\eq{
+    \int d\alpha d\beta\exp(-i(E_\alpha-E_\beta)\tau)g(\alpha)g^*(\beta)(\Psi_\beta^\pm,\Psi_\alpha^\pm)=\\
+\int d\alpha d\beta\exp(-i(E_\alpha-E_\beta)\tau)g(\alpha)g^*(\beta)(\Phi_\beta,\Phi_\alpha).
+}
+由于这个关系对于所有任取的波包 $ g(\alpha) $都成立，所以我们立刻知道只有当满足：
+\eq{
+    (\Psi_\beta^\pm,\Psi_\alpha^\pm)=(\Phi_\beta,\Phi_\alpha)=\delta(\beta-\alpha).
+}
+\rmk{我们注意，这个是in和in state或者 out和out state之间内积的结果。我们不考虑in和out state之间的内积。}
+
+\hlr{性质2: in and out states的explicit形式}
+
+其实满足定义的两条关系我们可以形式化的写出一个explicit的形式。我们首先把定义之中的$ H = H_0+V $进行展开：
+\eq{\label{eq:formalrewriteinout}
+    (E_\alpha-H_0)\Psi_\alpha^\pm=V\Psi_\alpha^\pm.
+} 
+然后我们意识到，由于$ \Phi_\alpha $ 也是本征值为$ H_\alpha $但是是$ H_0 $ 的本征态，所以我们有：$( E_\alpha-H_0 )\Phi_\alpha = 0 $也就是算符$ ( E_\alpha-H_0 ) $ 湮灭了$ \Phi_\alpha $量子态。于是\cref{eq:formalrewriteinout}可以写作：
+\eq{
+    (E_\alpha-H_0)(\Psi_\alpha^\pm-\Phi_\alpha)=V\Psi_\alpha^\pm.
+}
+这个时候我们希望把两边乘以算符$ (E_\alpha-H_0) $的逆。但问题是这个算符并不可逆，因为它的零空间并不是0，存在$ \Phi_\alpha $在零空间里。所以我们使用一个小技巧，我们把这个算符稍微perturb一下：   

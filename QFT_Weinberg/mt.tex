@@ -9,6 +9,7 @@
         U(\Lambda,a)&\Psi_{_{p_{1},\sigma_{1},\eta_{1};p_{2},\sigma_{2},\eta_{2};\cdots}}=\exp\left(-ia_{\mu}(p_{1}^{\mu}+p_{2}^{\mu}+\cdots)\right)\\&\times\sqrt{\frac{(\overline{\Lambda}p_{1})^{0}(\overline{\Lambda}p_{2})^{0}\cdots}{p_{1}^{0}p_{2}^{0}\cdots}}\sum_{\sigma_{1}^{\prime}\sigma_{2}^{\prime}\cdots}D_{\sigma_{1}^{\prime}\sigma_{1}}^{(j_{1})}\left(W(\Lambda,p_{1})\right)D_{\sigma_{2}^{\prime}\sigma_{2}}^{(j_{2})}\left(W(\Lambda,p_{2})\right)\\&\times\Psi_{_{\Lambda p_{1},\sigma_{1}^{\prime},n_{1};\Lambda p_{2},\sigma_{2}^{\prime},n_{2};\cdots}}
     \end{aligned}
 }
+\rmk{注意，每一个单粒子$ i $ 我们有三个label：第一个是$ p_i $也就是能动量四矢量；第二个是$ \sigma_i $也就是Wigner Little Group的自由度；第三个是$ n_i $也就是这个粒子的种类。   }
 复习一下其中$ W(\Lambda,p) $ 是Wigner Rotation，定义是：\cref{eq:Wignerrotation}也就是：$ W(\Lambda,p)=L^{-1}(\Lambda p)\Lambda L(p). $ 。其中D矩阵是SO(3)群的表示矩阵定义为：\cref{eq:Dtrans}。对于无质量的粒子是另一个表示就是$ \delta_{\sigma,\sigma'} exp(i \sigma \theta(\Lambda,p))$。同样的我们定义一个合理的normalization是：
 \eq{
 \begin{aligned}
@@ -50,7 +51,7 @@
 其中$ E_\alpha = p^0_1+p^0_2+... $ 。
 
 
-\subsection{In and Out States}
+\subsection{In and Out States定义}
 
 \hlr{现在我们不考虑无相互作用的粒子，而是考虑一个有相互作用的散射过程。}但是这个过程有个特点，就是在我们认为在$ - \infty $以及$ +\infty $的时间，粒子相当于没有相互作用的。  
 
@@ -73,10 +74,15 @@
     对于未来的观察者来说，如果A观察者在某一个时刻观察到了一个量子态$ \Psi_\alpha $，那么对于B来说，他在这个事件发生同时观测到的量子态就是$ U(Id,-\tau) \Psi_\alpha = e^{-iH\tau} \Psi$ 。
 
     这也就是时间平移算符的正负号的来源，请注意。
-\itm{
+}
+\rmk{\itm{
     \pt{第二个值得注意的是，我们既然如此，并不存在绝对的量子态，而是存在不同时间的量子态的相对关系，除非我们定义一个时间点。}
 }
-但是，这里我们知道不论定义哪个时间点。我们对于负无穷时间的观察者，如果时间发生在自己的时间0点（当然选哪个有限的时间都是一样的。）那么一般的观察者会知道这个事件发生在$ -\infty $的时间点。对于正无穷时间的观察者来说，他会知道这个事件发生在$ +\infty $的时间点。所以$ t_{\mp\infty} = t_A -(\mp \infty) $。这个才是正确的洛伦兹变换，以及怎么理解这件事。    
+但是，这里我们知道不论定义哪个时间点。我们对于负无穷时间的观察者，如果时间发生在自己的时间0点（当然选哪个有限的时间都是一样的。）那么一般的观察者会知道这个事件发生在$ -\infty $的时间点。对于正无穷时间的观察者来说，他会知道这个事件发生在$ +\infty $的时间点。所以$ t_{\mp\infty} = t_A -(\mp \infty) $。这个才是正确的洛伦兹变换，以及怎么理解这件事。 
+
+这个操作只有对in and out states这样的无穷时间的态才能这么定义，对于有限时间的态我们还是需要定义什么样的观察者看到的就是这样的态。\YL{这个是我自己的理解我觉得并不一定正确。我觉得需要讨论一下。}
+}
+\rmk{   
 
 \itm{
     \pt{还有值得注意的是：什么叫"在$ \infty $时间等价于无相互作用粒子态"。因为我们考虑的量子态都是能动量本征态，那么由于不确定性原理，这样的量子态必然是弥散在时间和空间上面的。}
@@ -91,7 +97,6 @@
 }
 分别对于$ \tau \gg 1/\Delta E $ 和$ \tau $远小于$ -1/\Delta E $
 \YL{【不知道为啥，但是远小于符号就是打不出来！！】}
-
 }
 
 在上面充分的讨论的基础上我们就可以严格的定义in and out states了。
@@ -149,6 +154,8 @@
         }
         注意这个仅仅是一个形式化的表达。等式\cref{eq:timeinoutstate}是在「考虑波包」的意义下成立的。
 }
+
+\subsection{In and Out states的性质}
 下面我们讨论这样的in and out states满足什么样的性质:
 \bigskip
 
@@ -163,6 +170,11 @@
 \eq{
     (\Psi_\beta^\pm,\Psi_\alpha^\pm)=(\Phi_\beta,\Phi_\alpha)=\delta(\beta-\alpha).
 }
+这就说明in and out states是正交的。各自是一组Hilbert空间的正交归一基，就和自由例子态一样的！！
+\rmk{
+注意正交和完备性是两个概念，正交的定义是$ \braket{a_i}{a_j}= \delta_{ij} $；而完备的定义是$ \sum_i \ket{a_i}\bra{a_i} = 1 $ 。 
+
+物理之中，我们一般认为我们的这些基是完备的。虽然我们并不能证明。但是这些基是有实际的物理意义的，就是具体的粒子。我们认为世界上只存在这样的粒子，所以就是完备的。}
 \rmk{我们注意，这个是in和in state或者 out和out state之间内积的结果。我们不考虑in和out state之间的内积。}
 
 \hlr{性质2: in and out states的explicit形式}
@@ -172,7 +184,129 @@
     (E_\alpha-H_0)\Psi_\alpha^\pm=V\Psi_\alpha^\pm.
 } 
 然后我们意识到，由于$ \Phi_\alpha $ 也是本征值为$ H_\alpha $但是是$ H_0 $ 的本征态，所以我们有：$( E_\alpha-H_0 )\Phi_\alpha = 0 $也就是算符$ ( E_\alpha-H_0 ) $ 湮灭了$ \Phi_\alpha $量子态。于是\cref{eq:formalrewriteinout}可以写作：
-\eq{
+\eq{\label{eq:perturbannilationabit}
     (E_\alpha-H_0)(\Psi_\alpha^\pm-\Phi_\alpha)=V\Psi_\alpha^\pm.
 }
-这个时候我们希望把两边乘以算符$ (E_\alpha-H_0) $的逆。但问题是这个算符并不可逆，因为它的零空间并不是0，存在$ \Phi_\alpha $在零空间里。所以我们使用一个小技巧，我们把这个算符稍微perturb一下：   
+这个时候我们希望把两边乘以算符$ (E_\alpha-H_0) $的逆。但问题是这个算符并不可逆，因为它的零空间并不是0，存在$ \Phi_\alpha $在零空间里。所以我们使用一个小技巧，我们把这个算符稍微perturb一下，我们考虑下面的算符：   
+\eq{
+    (E_\alpha-H_0 \pm i\epsilon)
+}
+我们规定研究in states的时候$ +i\epsilon $研究out states的时候$ -i\epsilon $。在这个基础上我们可以形式化写出来$ \Psi_\alpha $满足的一个形式：
+\eq{\label{eq:preLSequation}
+    \Psi_{\alpha}^{\pm}=\Phi_{\alpha}+(E_{\alpha}-H_{0}\pm i\epsilon)^{-1}V\Psi_{\alpha}^{\pm},
+}   
+\rmk{但是显然，这个形式并不是唯一的，因为$ (E_\alpha-H_0) $算符湮灭的可能不仅仅有$ \Phi_\alpha $一个量子态，可能有多重简并的；除此之外公式\cref{eq:perturbannilationabit}里面我们显然减去所有煎饼果子的态，减去任意多个都是成立的，所以形式并不唯一。 
+
+考虑到上面的remark我们下面给出说明，只有写成这样的形式我们才能搞出满足第二个条件而且物理上看起来合理的in and out states的explicit形式。
+}
+在这些讨论的基础上我们给出：
+\imp{Lippmann-Schwinger Equation}{
+    这个方程给出了in and out states的explicit形式，我们对于\cref{eq:preLSequation}的右边的$ V\Psi_{\alpha}^{\pm} $量子态对于一个正交完备基进行展开，我们使用自由多粒子态作为正交完备基，结论是：
+    \eq{\label{eq:LSequation}
+        \begin{aligned}\Psi_{\alpha}^{\pm}&=\Phi_{\alpha}+\int d\beta\frac{T_{\beta\alpha}^{\pm}\Phi_{\beta}}{E_{\alpha}-E_{\beta}^{\pm}i\epsilon},\\T_{\beta\alpha}^{\pm}&\equiv(\Phi_{\beta},V\Psi_{\alpha}^{\pm}),\end{aligned}
+    } 
+    这个就是具体的形式。
+}
+下面我们验证这个方程给出的in and out states的具体形式，第二个性质就是相当于我们考虑下面两个量之间的差值是否在$ \tau \to \infty $的时候趋近于0:
+\eq{
+    \Psi_g^\pm(t)\equiv\int d\alpha e^{-iE_xt}g(\alpha)\Psi_x^\pm,\\\Phi_g(t)\equiv\int d\alpha e^{-iE_xt}g(\alpha)\Phi_\alpha.
+} 
+根据公式：\cref{eq:LSequation} 我们知道这两个量的差值就是：
+\eq{\label{eq:differenceofLS}
+    \int d\alpha e^{-iE_xt}g(\alpha)\Psi_x^\pm-\int d\alpha e^{-iE_xt}g(\alpha)\Phi_\alpha = \int d\alpha\int d\beta\frac{e^{-iE_{\alpha}t}g(\alpha)T_{\beta\alpha}{}^{\pm}\Phi_{\beta}}{E_{\alpha}-E_{\beta}\pm i\epsilon}.
+}
+也就是我们需要研究积分：
+\eq{\label{eq:integralofLS}
+    \int d\alpha\int d\beta\frac{e^{-iE_{\alpha}t}g(\alpha)T_{\beta\alpha}{}^{\pm}\Phi_{\beta}}{E_{\alpha}-E_{\beta}\pm i\epsilon}.
+}
+在$ t \to 0 $的取值结果。
+\rmk{我们回忆积分是什么意思，是：\hlr{对于所有【三维的动量】进行积分，对于所有自旋以及粒子种类进行求和。}
+
+我们对于三维空间的动量进行积分，因为确定粒子的质量之后，动量的自由度其实只有三维，能量等于$ \sqrt{p^2-M^2}  $。 
+} 
+对于离散的求和我们没有什么好说的，我们先对其确定自旋和粒子种类，对于所有粒子的三维空间的动量进行积分。对于积分\cref{eq:integralofLS}我们首先进行积分变量互换，先积分$ \alpha $的部分 ：
+\eq{
+    \mathscr{F}_{\beta}{}^{\pm}\equiv\int d\alpha\frac{e^{-iE_{\alpha}t}g(\alpha)T_{\beta\alpha}{}^{\pm}}{E_{\alpha}-E_{\beta}\pm i\epsilon}.
+}
+\hlr{我们先考虑in states的情况，也就是取+的情况}
+
+动量的积分是对于整个实轴进行积分。但是我们发现这个积分等于一个特殊的围道积分，如下图:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{2025-07-21-14-05-54.png}
+    \caption{积分曲线}
+    \label{fig:inteloop}
+\end{figure}
+对于in state，我们的$ t \to -\infty $。对于复平面的动量来说，由于是上半平面，$ p = p_{Re} +\mathrm{i}p_{Im}$并且$ p_{Im} >0 $。所以，由于$ \sqrt{p^2-M^2} = E_\alpha  $ 所以$ E_\alpha = E_{Re} +\mathrm{i}E_{Im} $ 并且$ E_{Im}>0 $。因此：
+\eq{
+    e^{-iE_\alpha t} = e^{-iE_{Re}t}e^{E_{Im}t} 
+} 
+当$ t \to -\infty $的时候，$ e^{E_{Im}t} \to 0 $。所以我们可以把围道积分的上半平面部分的积分结果是0。
+
+下面，我们考虑这个围道里面的极点。我们注意到极点是$ E_\alpha = E_\beta -i\epsilon $并不在围道里面，所以并没有留数，所以积分是0。
+
+\YL{[我有两个问题：1.到底为什么认为分子是没有极点的。2.似乎取$ +\mathrm{i}\epsilon $是纯粹恰好取的，这似乎就是凑出来的呃呃呃呃。]}
+
+\hlr{然后考虑out states的情况}
+会发现同样的，但是我们在下半平面进行围道积分，结果依旧是0.
+
+综上，我们的\cref{eq:differenceofLS}等式右面是0。所以可以证明我们的LS方程确实表征了in and out states的explicit形式。
+
+\subsection{一个特殊记号}
+
+我们在LS方程之中使用了$ (E \pm \mathrm{i} \epsilon)^{-1} $这个算符。这个算符有一个改写方法：
+\eq{
+    (E\pm i\epsilon)^{-1}=\frac{\mathscr{P}_\epsilon}{E}\mp i\pi\delta_\epsilon(E),
+} 
+其中涉及的两个函数是：
+\eq{
+    \frac{\mathscr{P}_\epsilon}{E}\equiv\frac{E}{E^2+\epsilon^2},\quad \delta_\epsilon(E)\equiv\frac{\epsilon}{\pi(E^2+\epsilon^2)}.
+}
+我们分别讨论两个函数：
+\itm{
+    \pt{对于$ \frac{\mathscr{P}_\epsilon}{E} $我们会发现当$ E \gg \epsilon $的时候就是$ 1/E $但是在0附近就变成了0.所以相当于给了$ 1/E $一个在实轴上面积分的可能，把发散去除了。}
+    \pt{$ \delta_\epsilon(E) $则类似delta函数，把0点附近的发散补了回来，但是是以delta函数的方式。 }
+}
+
+\section{S-matrix}
+我们定义了in and out states之后我们可以使用一个振幅来表征从某一个in state经过散射到达某一个out state的概率，这个振幅我们定义为S-matrix。
+
+\imp{S-matrix定义}{
+    我们定义矩阵也就是一个in state和一个out state之间的内积为：
+    \eq{
+        S_{\beta x}=(\Psi_{\beta}^{-},\Psi_{\alpha}^{+}).
+    }
+}
+我们下面讨论这个矩阵的一些性质：
+\bigskip
+
+\hlr{1. }如果没有相互作用V，那么in and out states就是完全一样的所以 $ S_{\alpha\beta} = \delta(\alpha-\beta) $ 所以我们可以用S矩阵和delta函数的区别表征一个反应的概率。
+
+\rmk{in and out states是生活在同样的一个Hilbert空间之中的两个量子态，他们只是label的定义方式不一样，一个是趋近于正无穷定义的；另一个是趋近于负无穷。}
+\bigskip
+
+\hlr{2.} S矩阵是unitary的。也就是$ S^\dagger S = 1 $。
+
+因为S矩阵相当于某一个Hilbert空间的两组正交基的变换矩阵，显然应该是Unitary的矩阵。同时，我们可以根据定义有：
+\eq{
+    \int d\beta S_{\beta\gamma}^*S_{\beta\alpha}=\int d\beta(\Psi_\gamma^+,\Psi_\beta^-)(\Psi_\beta^-,\Psi_\alpha^+)=(\Psi_\gamma^+,\Psi_\alpha^+).
+}
+中间第二步使用了完备的条件，我们并没有证明这是完备的，但是我们相信，对于我们考虑的物理世界，in and out states都是完备的基。最后根据正交性条件我们有：
+\eq{
+    \int d\beta S_{\beta\gamma}^{*}S_{\beta\alpha}=\delta(\gamma-\alpha)
+}
+同理有：
+\eq{
+    \int d\beta\mathrm{~}S_{\gamma\beta}S_{\alpha\beta}^*=\delta(\gamma-x)
+}
+所以我们的S矩阵是Unitary的矩阵。
+\bigskip
+
+\hlr{3.} S矩阵的另一个定义。我们有的时候会通过一个算符S和自由粒子态定义S矩阵。
+\imp{S矩阵等价定义}{
+    我们之前定义自由粒子态是$ \Phi_\alpha $ 那么S矩阵可以写成这样的形式：
+    \eq{
+        (\Phi_{\beta},S\Phi_{\alpha})\equiv S_{\beta\alpha}.
+    }
+
+}   

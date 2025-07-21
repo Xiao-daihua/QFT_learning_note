@@ -308,5 +308,38 @@
     \eq{
         (\Phi_{\beta},S\Phi_{\alpha})\equiv S_{\beta\alpha}.
     }
-
+我们考虑写作这个形式的S算符是什么，我们回顾形式化的表达：\cref{eq:timeinoutstate}。所以我们知道可以使用$ \Omega $算符来表达S算符：
+\eq{
+    S=\Omega(\infty)^{\dagger}\Omega(-\infty)=U(+\infty,-\infty)\mathrm{~,}
+} 
+其中我们还可以定义：
+\eq{
+    U(\tau,\tau_0)\equiv\Omega(\tau)^\dagger\Omega(\tau_0)=\exp(iH_0\tau)\exp(-iH(\tau-\tau_0))\exp(-iH_0\tau_0).
+}
 }   
+\rmk{注意我们的$ \Omega $算符只是形式化表达，只用作用下一个小波包上面才有意义。}
+
+\hlr{4. }我们下面意识到S矩阵还有一个explicit的表达方式。当我们参考使用LS方程的积分形式，我们考虑对于一个in states都是完备的基。最后根据正交性条件我们有\cref{eq:differenceofLS}也就是：
+\eq{\label{eq:phipsirelation}
+    \Psi_\mathrm{g}^+(t)=\Phi_\mathrm{g}(t)+\int d\alpha\int d\beta\frac{e^{-iE_\alpha t}g(\alpha)T_{\beta\alpha}{}^+\Phi_\beta}{E_\alpha-E_\beta+ i\epsilon}.
+}
+但是我们计算后面的项的时候我们强行取$ t \to +\infty $，所以应该在下半平面进行积分。这个和out state不同因为out state分母上面是：$ E_\alpha-E_\beta- i\epsilon $ 所以我们在下半平面没有极点。但是对于$ E_\alpha-E_\beta+ i\epsilon $来说我们选择下半平面进行积分之后存在极点以及不为0的留数。
+
+「注意，我们围道积分是顺时针的，所以积分结果是$ -2 \pi \mathrm{i} $ 的留数」
+
+我们依旧考虑这个积分的结果是什么：
+\eq{
+     \mathscr{F}_{\beta}{}^{+} = \int d\alpha\frac{e^{-iE_{\alpha}t}g(\alpha)T_{\beta\alpha}{}^{+}}{E_{\alpha}-E_{\beta}\pm i\epsilon}.
+}
+我们知道留数出现在$ \epsilon $趋于0的时候基本上就是$ E_\alpha = E_\beta $的时候。所以，我们可以把积分结果写作：
+\eq{
+    \mathscr{F}_{\beta}{}^+\to-2i\pi e^{-iE_{\beta}t}\int dx\delta(E_{\alpha}-E_{\beta})g(\alpha){T_{\beta\alpha}}^{+}
+}  
+写开之后我们之前的\cref{eq:phipsirelation}可以展开写成：
+\eq{
+    \Psi_g^+(t)\to\int d\beta e^{-iE_\beta t}\Phi_\beta\left[g(\beta)-2i\pi\int d\alpha\delta(E_\alpha-E_\beta)g(\alpha)T_{\beta\alpha}^+\right].
+}
+在这个基础上，我们
+
+
+

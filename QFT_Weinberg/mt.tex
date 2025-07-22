@@ -208,7 +208,7 @@
     这个就是具体的形式。
 }
 下面我们验证这个方程给出的in and out states的具体形式，第二个性质就是相当于我们考虑下面两个量之间的差值是否在$ \tau \to \infty $的时候趋近于0:
-\eq{
+\eq{\label{eq:definegt}
     \Psi_g^\pm(t)\equiv\int d\alpha e^{-iE_xt}g(\alpha)\Psi_x^\pm,\\\Phi_g(t)\equiv\int d\alpha e^{-iE_xt}g(\alpha)\Phi_\alpha.
 } 
 根据公式：\cref{eq:LSequation} 我们知道这两个量的差值就是：
@@ -333,13 +333,41 @@
 }
 我们知道留数出现在$ \epsilon $趋于0的时候基本上就是$ E_\alpha = E_\beta $的时候。所以，我们可以把积分结果写作：
 \eq{
-    \mathscr{F}_{\beta}{}^+\to-2i\pi e^{-iE_{\beta}t}\int dx\delta(E_{\alpha}-E_{\beta})g(\alpha){T_{\beta\alpha}}^{+}
+    \mathscr{F}_{\beta}{}^+(t \to \infty )\to-2i\pi e^{-iE_{\beta}t}\int dx\delta(E_{\alpha}-E_{\beta})g(\alpha){T_{\beta\alpha}}^{+}
 }  
-写开之后我们之前的\cref{eq:phipsirelation}可以展开写成：
-\eq{
-    \Psi_g^+(t)\to\int d\beta e^{-iE_\beta t}\Phi_\beta\left[g(\beta)-2i\pi\int d\alpha\delta(E_\alpha-E_\beta)g(\alpha)T_{\beta\alpha}^+\right].
+写开之后我们带入之前的\cref{eq:phipsirelation}可以展开写成，对于$ t \to +\infty $的情况下，我们有 ：
+\eq{\label{eq:integraldeduction}
+    \Psi_g^+(t\to \infty)\to\int d\beta e^{-iE_\beta t}\Phi_\beta\left[g(\beta)-2i\pi\int d\alpha\delta(E_\alpha-E_\beta)g(\alpha)T_{\beta\alpha}^+\right].
 }
-在这个基础上，我们
+\line
+同时我们知道，使用S矩阵可以把$ \Psi_\alpha^{+} $使用$ \Psi_\beta^{-} $进行展开展开结果是：
+\eq{
+   \Psi_\alpha^{+} =  \int d\beta\Psi_{\beta}^-S_{\beta\alpha}.
+} 
+我们把这个带入到$ \Psi_g^+(t) $的定义\cref{eq:definegt}得到的结果是：
+ \eq{
+    \Psi_g^+(t)=\int dxe^{-iE_\alpha t}g(\alpha)\int d\beta\Psi_\beta^-S_{\beta\alpha}.
+ }
+由于我们认为$ S_{\alpha\beta} $矩阵之中包含一个$ \delta(\alpha - \beta) $的样子，所以我们不妨改变积分顺序并把$ \Psi_\beta^- $提到对$ \alpha $积分的前面。\YL{我对于这个操作是否合法深表怀疑，关于S矩阵能够代表delta函数我很怀疑对于一般情况这个是否成立。}但总之我们写作：
+\eq{
+    \Psi_{g}^{+}(t)=\int d\beta\Psi_{\beta}^{-}e^{-iE_{\beta}t}\int d\alpha g(\alpha)S_{\beta\alpha}
+}
+我们考虑这个式子$ t \to \infty $的极限，由于在无穷极限下面$ \Psi $逐渐类似于$ \Phi $\YL{这也是一个禁不起考验的论断呃呃，似乎就是物理直观并不严谨。}我们有：
+\eq{\label{eq:Smatrixdudction}
+    \Psi_g^+(t)\to\int d\beta\Phi_\beta e^{-iE_\beta t}\int d\alpha g(\alpha)S_{\beta\alpha}.
+}   
 
-
-
+最终我们对比\cref{eq:Smatrixdudction}以及\cref{eq:integraldeduction}这个两个不同的推导过程导出的$ t \to \infty $呃情况下$ \Psi_g^+(t) $  的结果。我们有：
+\eq{
+    \int d\alpha\mathrm{~g}(\alpha)S_{\beta\alpha}=\mathrm{g}(\beta)-2\mathrm{i}\pi\int d\alpha\mathrm{~}\delta(E_\alpha-E_\beta)\mathrm{g}(\alpha)T_{\beta\alpha}{}^+
+}
+对于这个结果我们意识到了一个S矩阵的explicit的表达式：
+\eq{
+    S_{\beta\alpha}=\delta(\beta-\alpha)-2i\pi\delta(E_{\alpha}-E_{\beta}){T_{\beta\alpha}}^{+}
+}
+\imp{Born Approximation}{
+    当相互作用V比较小的时候，我们可以忽略in state和free particle的区别于是得到近似：
+    \eq{
+        S_{\beta\alpha}\simeq\delta(\beta-\alpha)-2i\pi\delta(E_{\alpha}-E_{\beta})(\Phi_{\beta},V\Phi_{\alpha})\mathrm{~.}
+    }
+}

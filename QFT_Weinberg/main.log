@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  22 JUL 2025 12:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.26)  25 JUL 2025 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1374,24 +1374,24 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 831--831
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--831
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--831
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
 
  []
 
 
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 855--855
+Underfull \hbox (badness 10000) in paragraph at lines 854--854
 
  []
 
@@ -1406,7 +1406,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 855--855
 [28]
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
 
  []
 
@@ -1415,7 +1415,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
 [30]
 
 [31]
-Underfull \hbox (badness 2142) in paragraph at lines 1113--1113
+Underfull \hbox (badness 2142) in paragraph at lines 1112--1112
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
@@ -1437,15 +1437,15 @@ File: 2025-07-16-16-03-14.png Graphic file (type bmp)
 [37]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1325.
+(hyperref)                removing `math shift' on input line 1324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1325.
+(hyperref)                removing `superscript' on input line 1324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1325.
+(hyperref)                removing `math shift' on input line 1324.
 
 
 
@@ -1491,7 +1491,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
 
 
-[48])
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+
+ []
+
+)
 
 [49]
 Chapter 3.
